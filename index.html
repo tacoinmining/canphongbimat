@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Căn phòng bí mật</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="dark-mode">
+    <!-- MÀN HÌNH LOFI CHILL / MƯA RƠI (KHÓA CỨNG TOÀN BỘ) -->
+    <div id="lofiOverlay" class="lofi-overlay">
+      <div class="rain-container" id="rainContainer"></div>
+      <div class="lofi-content">
+        <h1 class="lofi-title">🌧️ ĐỜI CƠ MÀ... CỨ CHILL ĐI 🌧️</h1>
+        <p class="lofi-quote">
+          "Tiền mất có thể kiếm lại, nhưng sự ngây thơ thì không..."
+        </p>
+      </div>
+    </div>
+
+    <div class="switch-container">
+      <label class="switch">
+        <input type="checkbox" id="lightSwitch" onchange="handleToggle()" />
+        <span class="slider"></span>
+      </label>
+      <span class="switch-label" id="switchText">Bật đèn</span>
+    </div>
+
+    <!-- Pop-up tống tiền (Modal 1) -->
+    <div class="modal" id="ransomModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>🔒 Mở Khóa Tắt Đèn</h2>
+          <p>Bạn đã bật đèn và cần nạp phí để tiếp tục sử dụng!</p>
+        </div>
+
+        <div class="qr-container">
+          <img
+            src="photo_2026-08-26_00-42-55.jpg"
+            alt="Mã QR Chuyển Khoản"
+            class="qr-image"
+          />
+        </div>
+
+        <div class="modal-instruction">
+          <p>Chuyển khoản một số tiền bất kì để mở khóa</p>
+        </div>
+
+        <p id="fakeWarning" class="fake-warning"></p>
+
+        <div class="modal-buttons">
+          <button class="close-fake-btn" onclick="handleTransferDone()">
+            Đã chuyển tiền!
+          </button>
+          <button class="not-yet-btn" onclick="handleNotYet()">
+            Chưa chuyển tiền
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- POP-UP BỊ LỪA (COZY & DỄ THƯƠNG) -->
+    <div class="modal" id="trappedModal">
+      <div class="modal-content prank-content">
+        <h2 class="prank-title">🧸 Ôi Bạn Ơi, Bị Lừa Mất Rồi! 🤭</h2>
+        <p class="prank-desc">
+          Đừng buồn nha, chuẩn bị tinh thần chill cùng bài nhạc nào~
+        </p>
+
+        <button class="party-btn" onclick="closePrankPopupOnly()">
+          BẠN ĐÃ BỊ LỪA RỒI, TIẾP TỤC NÀO!
+        </button>
+      </div>
+    </div>
+
+    <!-- THẺ PHÁT NHẠC -->
+    <audio id="prankAudio" src="nhac_cua_ban.mp3" preload="auto"></audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>
