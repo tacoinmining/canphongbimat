@@ -364,3 +364,22 @@ input:checked + .slider:before {
   box-shadow: 0 8px 20px rgba(188, 108, 37, 0.4) !important;
   opacity: 0.95;
 }
+
+/* --- CHỮ KÝ GÓC DƯỚI BÊN TRÁI --- */
+.watermark {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: inherit;
+  opacity: 0.4; /* Độ mờ vừa phải để không bị chói mắt */
+  z-index: 999; /* Đảm bảo nó hiển thị nổi lên trên nền */
+  pointer-events: none; /* Không cản trở các thao tác chuột bấm vào web */
+  transition: opacity 0.3s ease;
+}
+
+.watermark:hover {
+  opacity: 0.8;
+}
