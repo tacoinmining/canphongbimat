@@ -373,13 +373,9 @@ input:checked + .slider:before {
   font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 1px;
-  color: inherit;
-  opacity: 0.4; /* Độ mờ vừa phải để không bị chói mắt */
-  z-index: 999; /* Đảm bảo nó hiển thị nổi lên trên nền */
-  pointer-events: none; /* Không cản trở các thao tác chuột bấm vào web */
+  color: #fff; /* Đổi màu trắng để luôn nổi bật trên nền tối của lofi */
+  opacity: 0.4;
+  z-index: 999999; /* Đặt số cực lớn để luôn đè lên trên mọi lớp màn hình */
+  pointer-events: none;
   transition: opacity 0.3s ease;
-}
-
-.watermark:hover {
-  opacity: 0.8;
 }
